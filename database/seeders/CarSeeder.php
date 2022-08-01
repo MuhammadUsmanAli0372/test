@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Jobs\CreateCar;
 use App\Models\Car;
 use App\Models\CarModel;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -17,7 +18,6 @@ class CarSeeder extends Seeder
      */
     public function run()
     {
-
         $json = File::get("database/data/car.json");
         $cars = json_decode($json);
 

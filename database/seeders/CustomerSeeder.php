@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Jobs\CreateCustomer;
 use App\Models\Customer;
+use App\Models\CustomerCar;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use File;
 
 class CustomerSeeder extends Seeder
 {

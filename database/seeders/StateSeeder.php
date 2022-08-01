@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Jobs\CreateStates;
 use App\Models\State;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -16,13 +17,11 @@ class StateSeeder extends Seeder
      */
     public function run()
     {
-        State::truncate();
-
         $json = File::get("database/data/states.json");
         $states = json_decode($json);
 
         foreach ($states as $key => $value) {
-            State::create([
+            State::firstOrCreate([
                 "name" => $value->name,
                 "code" => $value->code,
                 "capital" => $value->capital,

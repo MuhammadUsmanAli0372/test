@@ -12,7 +12,9 @@ class Customer extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['*'];
+    protected $fillable = [
+        'full_name', 'customer_location_id'
+    ];
 
     public function location(): BelongsTo
     {

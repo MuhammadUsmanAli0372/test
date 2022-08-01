@@ -15,7 +15,7 @@ class CustomerCarSeeder extends Seeder
      */
     public function run()
     {
-        CustomerCar::create([
+         CustomerCar::create([
             'customer_id' => 1,
             'car_id' => 1,
             'car_model_id' => 1,
